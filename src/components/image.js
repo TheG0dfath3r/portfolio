@@ -25,7 +25,7 @@ const BackgroundSection = ({ className }) => (
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
-          style={{ overflow: "scroll" }}
+          style={{ overflow: "hidden" }}
           Tag="section"
           className={className}
           fluid={imageData}
@@ -35,12 +35,12 @@ const BackgroundSection = ({ className }) => (
             <div
               style={{
                 height: "100vh",
-                marginLeft: "15%",
+
                 marginTop: "70px",
                 flexDirection: "column",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "flex-end",
                 float: "left",
               }}
             >
@@ -54,7 +54,7 @@ const BackgroundSection = ({ className }) => (
                   <h1
                     style={{
                       textAlign: "left",
-                      fontSize: "14vh",
+                      fontSize: "12vh",
                       textShadow: "2px 2px",
                       color: "#ffffff",
                       textShadow: "12px 12px #DA4859",
@@ -67,7 +67,7 @@ const BackgroundSection = ({ className }) => (
                 <AniLink style={{ textDecoration: "none" }} cover to="cc">
                   <h1
                     style={{
-                      fontSize: "14vh",
+                      fontSize: "12vh",
                       textShadow: "12px 12px #DA4859",
                       fontWeight: "800",
                       textDecoration: "none",
@@ -78,19 +78,26 @@ const BackgroundSection = ({ className }) => (
                     Projects
                   </h1>
                 </AniLink>
-                <h1
-                  style={{
-                    textAlign: "left",
-                    fontSize: "14vh",
-                    textShadow: "12px 12px #DA4859",
-                    textDecoration: "none",
-                    fontFamily: "Changa One",
-                    color: "#ffffff",
-                    fontFamily: "Montserrat",
-                  }}
+                <AniLink
+                  style={{ textDecoration: "none" }}
+                  cover
+                  direction="up"
+                  to="music"
                 >
-                  Music
-                </h1>
+                  <h1
+                    style={{
+                      textAlign: "left",
+                      fontSize: "12vh",
+                      textShadow: "12px 12px #DA4859",
+                      textDecoration: "none",
+                      fontFamily: "Changa One",
+                      color: "#ffffff",
+                      fontFamily: "Montserrat",
+                    }}
+                  >
+                    Music
+                  </h1>
+                </AniLink>
               </div>
               <div style={{ alignSelf: "flex-start" }}>
                 <img
@@ -111,9 +118,6 @@ const BackgroundSection = ({ className }) => (
               </div>
             </div>
           </Fade>
-          <AniLink cover direction="up" to="music">
-            Go to Page 4
-          </AniLink>
         </BackgroundImage>
       )
     }}
