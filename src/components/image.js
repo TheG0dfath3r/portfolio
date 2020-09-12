@@ -6,6 +6,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Fade from "react-reveal/Fade"
 
 import BackgroundImage from "gatsby-background-image"
+import { Grid } from "@material-ui/core"
 
 const BackgroundSection = ({ className }) => (
   <StaticQuery
@@ -32,19 +33,8 @@ const BackgroundSection = ({ className }) => (
           backgroundColor={`green`}
         >
           <Fade left>
-            <div
-              style={{
-                height: "100vh",
-
-                marginTop: "70px",
-                flexDirection: "column",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                float: "left",
-              }}
-            >
-              <div>
+            <Grid container style={{ height: "100vh" }}>
+              <Grid item style={{ marginTop: "auto" }}>
                 <AniLink
                   style={{ textDecoration: "none" }}
                   cover
@@ -98,8 +88,7 @@ const BackgroundSection = ({ className }) => (
                     Music
                   </h1>
                 </AniLink>
-              </div>
-              <div style={{ alignSelf: "flex-start" }}>
+
                 <img
                   alt="svgImg"
                   style={{ marginLeft: "5px", marginRight: "5px" }}
@@ -115,8 +104,8 @@ const BackgroundSection = ({ className }) => (
                   style={{ marginLeft: "5px", marginRight: "5px" }}
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjAiIGhlaWdodD0iNjAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTg2LDE3MmMtNDcuNDk2NDksMCAtODYsLTM4LjUwMzUxIC04NiwtODZ2MGMwLC00Ny40OTY0OSAzOC41MDM1MSwtODYgODYsLTg2djBjNDcuNDk2NDksMCA4NiwzOC41MDM1MSA4Niw4NnYwYzAsNDcuNDk2NDkgLTM4LjUwMzUxLDg2IC04Niw4NnoiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48ZyBmaWxsPSIjMDAwMDAwIj48cGF0aCBkPSJNMTI3LjI4LDM1LjU0NjY3aC04Mi41NmMtNS4wNjgyNywwIC05LjE3MzMzLDQuMTA1MDcgLTkuMTczMzMsOS4xNzMzM3Y4Mi41NmMwLDUuMDY4MjcgNC4xMDUwNyw5LjE3MzMzIDkuMTczMzMsOS4xNzMzM2g4Mi41NmM1LjA2ODI3LDAgOS4xNzMzMywtNC4xMDUwNyA5LjE3MzMzLC05LjE3MzMzdi04Mi41NmMwLC01LjA2ODI3IC00LjEwNTA3LC05LjE3MzMzIC05LjE3MzMzLC05LjE3MzMzek02Ny40NDIzNSwxMTguMTA2NjdoLTEzLjUzMDY3di00My41MzY2NGgxMy41MzA2N3pNNjAuNTM5NDEsNjguMzQ1OTJjLTQuMzYxOTIsMCAtNy44ODkwNywtMy41MzYzMiAtNy44ODkwNywtNy44ODkwN2MwLC00LjM1Mjc1IDMuNTMxNzMsLTcuODg0NDggNy44ODkwNywtNy44ODQ0OGM0LjM0ODE2LDAgNy44ODQ0OCwzLjUzNjMyIDcuODg0NDgsNy44ODQ0OGMwLDQuMzUyNzUgLTMuNTM2MzIsNy44ODkwNyAtNy44ODQ0OCw3Ljg4OTA3ek0xMTguMTI1MDEsMTE4LjEwNjY3aC0xMy41MjE0OXYtMjEuMTcyMDVjMCwtNS4wNDk5MiAtMC4wOTE3MywtMTEuNTQ0NjQgLTcuMDMxMzYsLTExLjU0NDY0Yy03LjA0MDUzLDAgLTguMTIyOTksNS40OTk0MSAtOC4xMjI5OSwxMS4xNzc3MXYyMS41Mzg5OWgtMTMuNTIxNDl2LTQzLjUzNjY0aDEyLjk4MDI3djUuOTQ4OTFoMC4xODM0N2MxLjgwNzE1LC0zLjQyMTY1IDYuMjE5NTIsLTcuMDMxMzYgMTIuODAxMzksLTcuMDMxMzZjMTMuNzAwMzcsMCAxNi4yMzIyMSw5LjAxNzM5IDE2LjIzMjIxLDIwLjc0MDkxeiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+"
                 />
-              </div>
-            </div>
+              </Grid>
+            </Grid>
           </Fade>
         </BackgroundImage>
       )
