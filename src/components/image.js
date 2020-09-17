@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Swipe from "./drawer"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Fade from "react-reveal/Fade"
+import { motion } from "framer-motion"
 
 import BackgroundImage from "gatsby-background-image"
 import { Grid } from "@material-ui/core"
@@ -52,7 +53,9 @@ const BackgroundSection = ({ className }) => (
                     direction="right"
                     to="bio"
                   >
-                    <h1
+                    <motion.h1
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
                       style={{
                         fontSize: "12vh",
                         textShadow: "2px 2px",
@@ -62,10 +65,12 @@ const BackgroundSection = ({ className }) => (
                       }}
                     >
                       Bio
-                    </h1>
+                    </motion.h1>
                   </AniLink>
                   <AniLink style={{ textDecoration: "none" }} cover to="cc">
-                    <h1
+                    <motion.h1
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
                       style={{
                         fontSize: "12vh",
                         textShadow: "12px 12px #DA4859",
@@ -76,7 +81,7 @@ const BackgroundSection = ({ className }) => (
                       }}
                     >
                       Projects
-                    </h1>
+                    </motion.h1>
                   </AniLink>
                   <AniLink
                     style={{ textDecoration: "none" }}
@@ -84,7 +89,9 @@ const BackgroundSection = ({ className }) => (
                     direction="up"
                     to="music"
                   >
-                    <h1
+                    <motion.h1
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
                       style={{
                         textAlign: "left",
                         fontSize: "12vh",
@@ -96,7 +103,7 @@ const BackgroundSection = ({ className }) => (
                       }}
                     >
                       Music
-                    </h1>
+                    </motion.h1>
                   </AniLink>
 
                   <img

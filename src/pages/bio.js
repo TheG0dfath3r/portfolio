@@ -25,7 +25,14 @@ function Bio() {
           >
             Developer
           </h1>
-          <h1 style={{ fontSize: "10vh", fontFamily: "Montserrat" }}>
+          <h1
+            style={{
+              color: "#ffffff",
+              fontSize: "10vh",
+              fontFamily: "Montserrat",
+              textShadow: "12px 12px #DA4859",
+            }}
+          >
             Student
           </h1>
           <h1 style={{ fontSize: "11vh", fontFamily: "Montserrat" }}>
@@ -38,13 +45,7 @@ function Bio() {
             CodeChef-VIT
           </h1>
         </div>
-        <div>
-          <img src={anime} style={{ height: "200", width: "200px" }}></img>
-          <img src={html} style={{ height: "200", width: "200px" }}></img>
-          <img src={css} style={{ height: "200", width: "200px" }}></img>
-          <img src={js} style={{ height: "200", width: "200px" }}></img>
-          <img src={guitar} style={{ height: "200", width: "200px" }}></img>
-        </div>
+        <div></div>
 
         <div style={{ fontFamily: "Lato", fontSize: "30px", color: "#da4859" }}>
           Curious geek who loves to 'think different', has a passion for
@@ -54,7 +55,9 @@ function Bio() {
               textAlign: "left",
               fontSize: "80px",
               display: "inline",
+              color: "#ffffff",
 
+              textShadow: "12px 12px #DA4859",
               fontFamily: "Montserrat",
             }}
           >
@@ -103,7 +106,7 @@ function Bio() {
             RSM International '22
           </h1>
         </div>
-        <div>lOREM iPSUM</div>
+        <div></div>
       </Masonry>
     </ResponsiveMasonry>
   )
